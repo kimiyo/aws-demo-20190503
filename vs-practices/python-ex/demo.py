@@ -7,6 +7,7 @@ def hello(p1,p2,p3):
 
 hello('good!','good','hello') #I like update in the web directly
 #Update some more after merged to the master
+#Add one more line after merged and committed
 a=1 #update line
 hello('a','b','hello')
 hello("New","Line",'hello')#Update
