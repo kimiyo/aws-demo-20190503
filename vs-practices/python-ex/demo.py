@@ -1,13 +1,15 @@
 #demobranch
-def hello(p1,p2):
+def hello(p1,p2,p3):
+    #Add one more argument
     print('Hi ',p1)
     print('Hi there',p2)
+    print('Hi guy!')
 
-hello('good!','good') #I like update in the web directly
+hello('good!','good','hello') #I like update in the web directly
 a=1 #update line
-hello('a','b')
-hello("New","Line")
-hello("oh",'Hello') #Small update
+hello('a','b','hello')
+hello("New","Line",'hello')#Update
+hello("oh",'Hello','hello') #Small update
 #this is a new line
 #Hey, this is another udpate in master branch.
 #Wonderful feature in GIT.
