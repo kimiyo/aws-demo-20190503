@@ -8,6 +8,7 @@ resource "aws_instance" "web" {
   subnet_id = "${data.aws_subnet.selected.id}"
   iam_instance_profile ="${aws_iam_instance_profile.jh05-ec2-cw-role.name}"
   key_name = "jh-us-key"
+  vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"]
   tags = {
     Name = "test-cwlogs"
   }
