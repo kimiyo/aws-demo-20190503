@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ -f temp.sh ]
+then
+    rm temp.sh
+fi
+
+#echo python3 /Users/jonghoonkim/JHData/working/AWS-AIG-Simulate/create_infra_structure/setup_infra/utilities/STS/stsconsole.py $@
+python3 /Users/jonghoonkim/JHData/working/AWS-AIG-Simulate/create_infra_structure/setup_infra/utilities/STS/stsconsole.py $@ -o temp.sh
+if [ $? -eq 0 ]; then
+    if [ -f temp.sh ]
+    then
+        chmod +x temp.sh
+        #source ./temp.sh
+        if [ $? -eq 0 ]; then
+           echo Environent variables for AWS has been configured successfully.
+           echo "run the following command ==> "
+           echo      source ./temp.sh  
+        fi
+    else 
+       echo "failed to run $0"
+    fi
+else
+    echo "failed to run $0"
+fi
+
+
