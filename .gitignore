@@ -9,6 +9,7 @@
 # Directories
 .terraform/
 .vagrant/
+venv/
 
 # SSH Keys
 *.pem
@@ -21,3 +22,7 @@ temp.sh
 
 # Ignored Terraform files
 *gitignore*.tf
+
+# Key files - X.509 certificates
+*.key
+*.crt
