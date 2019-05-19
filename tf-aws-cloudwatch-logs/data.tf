@@ -11,9 +11,13 @@ owners = ["amazon"]
 
  filter {
    name   = "owner-alias"
-   values = ["amazon"]
+   values = ["amazon*"]
  }
 
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
+  }
 
  filter {
    name   = "name"

@@ -13,3 +13,14 @@ This site is to study GIT initially. In the future, I will use this site for AWS
 
 #Git Commands -- delete file/folder from the git history
   git filter-branch -f --index-filter "git rm -rf --cached --ignore-unmatch tf-aws-cloudwatch-logs/.terraform" -- --all
+
+
+# CloudWatch Agent
+wget https://s3.amazonaws.com/amazoncloudwatch-agent/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm
+sudo rpm -U ./amazon-cloudwatch-agent.rpm
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
+1.Linux
+1.EC2
+StatsD daemon ->1. yes
+Which port do you want StatsD daemon to listen to?
+default choice: [8125]
