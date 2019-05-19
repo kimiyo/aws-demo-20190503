@@ -3,16 +3,19 @@ provider "aws" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "${data.aws_ami.amazon-linux-2.id}"
+  ami           = "ami-0dd387866de2504e4"
+  # ami           = "${data.aws_ami.amazon-linux-2.id}"
   instance_type = "t2.micro"
-  subnet_id = "${data.aws_subnet.selected.id}"
-  iam_instance_profile ="${aws_iam_instance_profile.jh05-ec2-cw-role.name}"
+  subnet_id = "subnet-d04b288c"
+  # subnet_id = "${data.aws_subnet.selected.id}"
+  #iam_instance_profile ="${aws_iam_instance_profile.jh05-ec2-cw-role.name}"
   key_name = "jh-us-key"
-  vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"]
-  user_data              = "${data.template_file.aws_userdata.rendered}"
-  tags = {
-    Name = "test-cwlogs"
-  }
+  # vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"]
+  vpc_security_group_ids = ["sg-045dd2b1a4b45570e"]
+  #user_data              = "${data.template_file.aws_userdata.rendered}"
+  # tags = {
+  #   Name = "test-cwlogs"
+  # }
 }
 
 data "template_file" "aws_userdata" {
