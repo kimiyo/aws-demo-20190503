@@ -16,8 +16,7 @@ pipeline {
         jdkId = "jdk.0.8.0_181"
     }
     agent {
-        any
-        node {
+        any {
            customWorkspace '/work/test/ex04'
         }
     }
