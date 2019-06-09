@@ -17,7 +17,7 @@ pipeline {
     }
     agent {
         any {
-           customWorkspace '/work/test/ex04'
+           customWorkspace '/var/lib/jenkins/workspace/PPEX04/SAMPLE'
         }
     }
     parameters {
