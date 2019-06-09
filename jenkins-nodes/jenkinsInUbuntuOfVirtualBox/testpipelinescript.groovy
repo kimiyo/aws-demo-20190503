@@ -1,7 +1,7 @@
 def ENVIRONMENT =""
 def createBuildStage(props,comp) {
     return {
-        stage("BUILD "+ comp.NAME {
+        stage("BUILD "+ comp.NAME) {
             if (comp.DESCRIPTION !=null) {
                 echo comp.DESCRIPTION
             }
