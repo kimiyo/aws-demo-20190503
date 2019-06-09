@@ -15,7 +15,12 @@ pipeline {
         andId = "Ant"
         jdkId = "jdk.0.8.0_181"
     }
-    agent any
+    agent {
+        any
+        node {
+           customWorkspace '/work/test/ex04'
+        }
+    }
     parameters {
         string (
             description: 'Release Number',
