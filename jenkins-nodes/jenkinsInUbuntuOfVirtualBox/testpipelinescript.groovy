@@ -15,6 +15,7 @@ pipeline {
         andId = "Ant"
         jdkId = "jdk.0.8.0_181"
     }
+    agent { node { label 'jhTestingNode' } }
     parameters {
         string (
             description: 'Release Number',
